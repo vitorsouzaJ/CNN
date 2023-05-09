@@ -10,21 +10,21 @@ train_datagen = ImageDataGenerator(rescale=1./255,
 val_datagen = ImageDataGenerator(rescale=1./255)
 
 train_generator = train_datagen.flow_from_directory(
-    './data/train',
+    './data_set_orquideas_normal/train',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical',
     classes=['Oncidium', 'Zygopetalum', 'Vanda', 'Angraecum'])
 
 validation_generator = val_datagen.flow_from_directory(
-    './data/validation',
+    './data_set_orquideas_normal/validation',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical',
     classes=['Oncidium', 'Zygopetalum', 'Vanda', 'Angraecum'])
 
 test_generator = val_datagen.flow_from_directory(
-    './data/test',
+    './data_set_orquideas_normal/test',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical',
